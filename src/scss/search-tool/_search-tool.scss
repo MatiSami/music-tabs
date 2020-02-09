@@ -1,3 +1,23 @@
+.App {
+    text-align: center;
+    width: 100%;
+    background-color: #282c34;
+    background-image: url("../../assets/bg.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    transition: 0.3s width;
+    overflow: hidden;
+  }
+  
+
 form {
     display: flex;
 }
@@ -5,28 +25,34 @@ form {
 label {
     display: flex;
 }
+
+.search-tool_title {
+    letter-spacing: 10px;
+}
 .search-box {
     display: flex;
     // flex-direction: row;
     align-items: center;
     justify-content: center;
     
-    input {
+    select, input {
         background-color: #282C34;
         border: 2px solid rgb(106, 106, 107);
         border-radius: 5px;
         padding: 7px;
         color: white;
+        opacity: 0.8;
+        letter-spacing: 4px;
     }
-    input:focus {
+    select, input:focus {
         outline: none;
     }
 
-    input:active{
+    option:active, select:active, input:active{
         background-color: rgb(103, 103, 104); 
     }
 
-    input:hover {
+    select:hover, input:hover {
         background-color: rgb(103, 103, 104); 
     }
 }
@@ -37,4 +63,13 @@ label {
 
 .search-type__text {
     margin: 0 20px 0 20px;
+    letter-spacing: 5px;
+}
+
+.search-tool_error {
+    color: red;
+}
+
+.search-tool_error__hide {
+    display: none;
 }
