@@ -28,21 +28,6 @@ class SearchTool extends Component {
   handleChangeOption(event) {
     this.setState({ option: event.target.value });
   }
-
-  handleNoSearchResult(data) {
-    if (data.length === 0) {
-      this.setState({
-        noResults: true
-      });
-      console.log("brak wyników");
-    } else {
-      this.setState({
-        noResults: false
-      });
-      console.log("są wyniki");
-    }
-  }
-
   handleSubmit(event) {
     event.preventDefault();
 
