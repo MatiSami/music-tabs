@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/music-tabs/static/css/main.82c74bd7.chunk.css",
+    "main.js": "/music-tabs/static/js/main.956b3a65.chunk.js",
+    "main.js.map": "/music-tabs/static/js/main.956b3a65.chunk.js.map",
+    "runtime-main.js": "/music-tabs/static/js/runtime-main.1fee8e15.js",
+    "runtime-main.js.map": "/music-tabs/static/js/runtime-main.1fee8e15.js.map",
+    "static/js/2.1223adc3.chunk.js": "/music-tabs/static/js/2.1223adc3.chunk.js",
+    "static/js/2.1223adc3.chunk.js.map": "/music-tabs/static/js/2.1223adc3.chunk.js.map",
+    "index.html": "/music-tabs/index.html",
+    "precache-manifest.3009a52011ecf05113a5fd1861f5d3e3.js": "/music-tabs/precache-manifest.3009a52011ecf05113a5fd1861f5d3e3.js",
+    "service-worker.js": "/music-tabs/service-worker.js",
+    "static/css/main.82c74bd7.chunk.css.map": "/music-tabs/static/css/main.82c74bd7.chunk.css.map",
+    "static/js/2.1223adc3.chunk.js.LICENSE.txt": "/music-tabs/static/js/2.1223adc3.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/music-tabs/static/media/bg.93012910.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1fee8e15.js",
+    "static/js/2.1223adc3.chunk.js",
+    "static/css/main.82c74bd7.chunk.css",
+    "static/js/main.956b3a65.chunk.js"
+  ]
+}
