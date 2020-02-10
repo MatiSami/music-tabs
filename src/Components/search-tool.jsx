@@ -18,7 +18,6 @@ class SearchTool extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeOption = this.handleChangeOption.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleNoSearchResult = this.handleNoSearchResult.bind(this);
   }
 
   handleChange(event) {
