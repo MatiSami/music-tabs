@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   background-color: #14191c;
-  width: 400px;
+  // width: 0px;
   max-height: 100vh;
   transform: translateX(100%);
   transition: 0.3s transform;
@@ -11,6 +11,7 @@
   text-align: center;
   overflow: scroll;
   overflow-x: hidden;
+  display: none;
 
   li {
     list-style: none;
@@ -43,4 +44,38 @@
 
 .search-result_block {
   transform: translateX(0);
+  width: 400px;
+  display: block;
+  animation: showResult  0.4s;
+}
+
+.close-bar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  z-index: 3;
+  background-color: #1d2122;;
+  border-radius: 2px;
+  opacity: .9;
+  font-size: 20px;
+}
+
+.close-bar__icon {
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .search-result {
+    width: 100%;
+  }
+}
+
+@keyframes showResult {
+  from { width: 0;}
+  to { width: 400px;}
 }

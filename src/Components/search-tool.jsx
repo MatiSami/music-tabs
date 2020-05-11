@@ -14,20 +14,16 @@ class SearchTool extends Component {
       noResults: true,
       fetch: false,
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleChangeOption = this.handleChangeOption.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ value: event.target.value });
   }
 
-  handleChangeOption(event) {
+  handleChangeOption = (event) => {
     this.setState({ option: event.target.value });
   }
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
 
     if (this.state.value.length === 0) {
@@ -36,7 +32,7 @@ class SearchTool extends Component {
       });
     } else {
       fetch(
-        `http://www.songsterr.com/a/ra/songs.json?pattern=${this.state.value}`
+        `https://www.songsterr.com/a/ra/songs.json?pattern=${this.state.value}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -56,6 +52,14 @@ class SearchTool extends Component {
           }
         });
     }
+  }
+
+  handleCloseResults = () => {
+    this.setState({
+      resultDisplay: false,
+      // noResults: true,
+      searchResult: [],
+    })
   }
 
   render() {
@@ -108,6 +112,7 @@ class SearchTool extends Component {
             tab={this.state.option}
             display={this.state.resultDisplay}
             result={this.state.noResults}
+            close={this.handleCloseResults}
           />
         </div>
       </div>
