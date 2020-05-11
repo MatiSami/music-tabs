@@ -12,7 +12,7 @@ class SearchTool extends Component {
       option: "",
       error: false,
       noResults: true,
-      fetch: false
+      fetch: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -32,28 +32,27 @@ class SearchTool extends Component {
 
     if (this.state.value.length === 0) {
       return this.setState({
-        error: true
+        error: true,
       });
     } else {
       fetch(
         `http://www.songsterr.com/a/ra/songs.json?pattern=${this.state.value}`
       )
-        .then(response => response.json())
-        .then(data => {
+        .then((response) => response.json())
+        .then((data) => {
           if (data.length > 0) {
             this.setState({
               searchResult: data,
               resultDisplay: true,
               error: false,
-              noResults : false,
-              fetch : true
+              noResults: false,
+              fetch: true,
             });
-          }else {
+          } else {
             this.setState({
-              noResults : true,
-              resultDisplay: false
-            })
-            console.log("coś poszło nie tak")
+              noResults: true,
+              resultDisplay: false,
+            });
           }
         });
     }
@@ -61,38 +60,28 @@ class SearchTool extends Component {
 
   render() {
     let widthAppWithResult = {
-      width: "calc(100% - 400px)"
+      width: "calc(100% - 400px)",
     };
-    console.log(this.state.searchResult.length);
     return (
       <div
         className="App"
         style={this.state.resultDisplay ? widthAppWithResult : null}
       >
-        <div>
-          <h1 className="search-tool_title">Znajdź akordy do darcia mordy</h1>
+        <div className="wrapper">
+          <h1 className="search-tool__title">
+            Znajdź akordy swoich uluionych piosenek
+          </h1>
           <div className="search-box">
             <form onSubmit={this.handleSubmit}>
               <label>
                 <input
-                  style={{ width: "500px" }}
+                  // style={{ width: "500px" }}
                   placeholder="Wpisz artystę lub tytuł piosenki..."
                   className="search-type__text"
                   type="text"
                   value={this.state.value}
                   onChange={this.handleChange}
                 />
-              </label>
-              <label>
-                <select
-                  className="search-tool_select"
-                  value={this.state.option}
-                  onChange={this.handleChangeOption}
-                >
-                  <option value="TEXT_BASS_TAB">Bass</option>
-                  <option value="guitar-tab">Gitara</option>
-                  <option value="DRUM">Drums</option>
-                </select>
               </label>
               <input className="search-type" type="submit" value="Szukaj" />
             </form>
@@ -107,7 +96,9 @@ class SearchTool extends Component {
           </p>
           <p
             className={
-              this.state.noResults && this.state.fetch ? "search-tool_error" : "search-tool_error__hide"
+              this.state.noResults && this.state.fetch
+                ? "search-tool_error"
+                : "search-tool_error__hide"
             }
           >
             Brak wyników wyszukiwania

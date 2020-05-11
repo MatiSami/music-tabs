@@ -2,9 +2,9 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #14191C;
+  background-color: #14191c;
   width: 400px;
-  height: 100vh;
+  max-height: 100vh;
   transform: translateX(100%);
   transition: 0.3s transform;
   font-size: calc(10px + 1vmin);
@@ -12,13 +12,12 @@
   overflow: scroll;
   overflow-x: hidden;
 
-
   li {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 5px solid #14191C;
+    border-left: 5px solid #14191c;
   }
 
   li:hover {
@@ -27,9 +26,8 @@
   }
 
   li:nth-child(odd) {
-    background-color: #1D2122;  
-} 
-  
+    background-color: #1d2122;
+  }
 
   a {
     color: #fff;
@@ -46,4 +44,3 @@
 .search-result_block {
   transform: translateX(0);
 }
-
